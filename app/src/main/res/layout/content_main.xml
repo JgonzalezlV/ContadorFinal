@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:clipToPadding="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <TextView
+            android:id="@+id/tituloTexto"
+            android:layout_width="192dp"
+            android:layout_height="44dp"
+            android:text="Contador: "
+            android:textAlignment="center"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/contadorTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:textSize="56dp"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Resetea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="reseteaContador"
+                android:text="Resetear"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/reseteaNumero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="0"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="negativos" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <Button
+            android:id="@+id/Incrementa"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="incrementaContador"
+            android:text="+"
+            android:textSize="70dp"
+            tools:ignore="MissingConstraints" />
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="0dp"/>
+
+        <Button
+            android:id="@+id/Decrementa"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="restaContador"
+            android:text="-"
+            android:textAlignment="center"
+            android:textSize="70dp"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
