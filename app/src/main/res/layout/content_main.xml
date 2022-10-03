@@ -22,6 +22,7 @@
             android:layout_height="44dp"
             android:text="Contador: "
             android:textAlignment="center"
+            android:textSize="34sp"
             tools:ignore="MissingConstraints" />
 
         <EditText
@@ -29,43 +30,49 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
+            android:gravity="center|start|top"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
             android:textSize="56dp"
-            tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="bottom|center_horizontal"
-            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/Resetea"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="reseteaContador"
-                android:text="Resetear"
-                tools:ignore="MissingConstraints" />
+    </LinearLayout>
 
-            <EditText
-                android:id="@+id/reseteaNumero"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="0"
-                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="156dp">
 
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="negativos" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/Resetea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B55D5D"
+            android:onClick="reseteaContador"
+            android:text="Resetear"
+            tools:ignore="MissingConstraints" />
 
+        <EditText
+            android:id="@+id/reseteaNumero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="0"
+            android:textAlignment="center"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="negativos" />
     </LinearLayout>
 
     <LinearLayout
@@ -80,19 +87,22 @@
             android:id="@+id/Incrementa"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:backgroundTint="#ED0909"
             android:onClick="incrementaContador"
             android:text="+"
+            android:textAlignment="center"
             android:textSize="70dp"
             tools:ignore="MissingConstraints" />
 
         <Space
             android:layout_width="50dp"
-            android:layout_height="0dp"/>
+            android:layout_height="95dp" />
 
         <Button
             android:id="@+id/Decrementa"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:backgroundTint="#0CE310"
             android:onClick="restaContador"
             android:text="-"
             android:textAlignment="center"

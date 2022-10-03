@@ -13,6 +13,9 @@ public class MainActivity<ActivityMainBinding, AppBarConfiguration> extends AppC
     private ActivityMainBinding binding;
     public int contador;
 
+    public MainActivity() {
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
