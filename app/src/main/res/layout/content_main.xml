@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:clipToPadding="true"
+    android:padding="16dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
@@ -58,7 +58,7 @@
 
         <EditText
             android:id="@+id/reseteaNumero"
-            android:layout_width="wrap_content"
+            android:layout_width="89dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
@@ -67,12 +67,12 @@
             android:textAlignment="center"
             tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
-        <CheckBox
-            android:id="@+id/checkBox"
+        <Spinner
+            android:id="@+id/menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="negativos" />
+            android:layout_weight="1" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -95,7 +95,7 @@
             tools:ignore="MissingConstraints" />
 
         <Space
-            android:layout_width="50dp"
+            android:layout_width="78dp"
             android:layout_height="95dp" />
 
         <Button
@@ -108,6 +108,7 @@
             android:textAlignment="center"
             android:textSize="70dp"
             tools:ignore="MissingConstraints" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
