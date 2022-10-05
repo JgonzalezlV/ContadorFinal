@@ -20,7 +20,8 @@ public class MainActivity<ActivityMainBinding, AppBarConfiguration> extends AppC
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
     public int contador;
-    private ArrayAdapter<CharSequence> adapter = null;
+    private Spinner spinner;
+    private String[] opciones = {"Positivo","Negativo"};
 
 
 
@@ -37,15 +38,9 @@ public class MainActivity<ActivityMainBinding, AppBarConfiguration> extends AppC
 
     private void crearSpinner() {
 
-        Spinner spinner = (Spinner) findViewById(R.id.menu);
-        // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.eleccion, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
+        spinner = (Spinner) findViewById(R.id.menu);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,opciones);
         spinner.setAdapter(adapter);
-
 
 
     }
@@ -55,11 +50,16 @@ public class MainActivity<ActivityMainBinding, AppBarConfiguration> extends AppC
     public void incrementaContador(View vista){
 
 
-        contador++;
-
-        if (contador>0){
+        /*if (contador>0){
             RadioButton positivos = (RadioButton) findViewById(R.id.positivo);
             if (!positivos.isChecked()){
+                contador = 0;
+            }
+        }*/
+        contador++;
+        String seleccion = spinner.getSelectedItem().toString();
+        if (contador>0){
+            if (!seleccion.equals("Positivo")){
                 contador = 0;
             }
         }
@@ -70,9 +70,15 @@ public class MainActivity<ActivityMainBinding, AppBarConfiguration> extends AppC
     public void restaContador(View vista){
 
         contador--;
-        if (contador<0){
+        /*if (contador<0){
             RadioButton negativos = (RadioButton) findViewById(R.id.negativo);
             if (!negativos.isChecked()){
+                contador = 0;
+            }
+        }*/
+        String seleccion = spinner.getSelectedItem().toString();
+        if (contador<0){
+            if (!seleccion.equals("Negativo")){
                 contador = 0;
             }
         }
